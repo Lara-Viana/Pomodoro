@@ -17,11 +17,11 @@ const styles = StyleSheet.create({
   contextButtonText: {
     fontSize: 14,
     fontWeight: "bold",
-    color: "#FFF", 
+    color: "#915097ff", 
     padding: 8
   },
   contextButtonActive: {
-    backgroundColor: "#fa9aedff",
+    backgroundColor: "#f5a7eaff",
     fontSize: 12.5,
     color: "#FFF", 
     padding: 8,
