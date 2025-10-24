@@ -9,21 +9,21 @@ const pomodoro = [
   {
     id: 'focus',
     initialValue: 25*60,
-    image: require("./Pomodoro.png"),
+    image: require("../assets/images/Pomodoro.png"),
     display: 'Foco',
     color: '#efb5f7ff'
   },
   {
     id: 'short',
     initialValue: 5*60,
-    image: require("./Short.png"),
+    image: require("../assets/images/Short.png"),
     display: 'Pausa Curta',
     color: '#a67ef0ff'
   },
   {
     id: 'long',
     initialValue: 15*60,
-    image: require("./Long.png"),
+    image: require("../assets/images/Long.png"),
     display: 'Pausa Longa',
     color: '#fc7bcaff'
   }
