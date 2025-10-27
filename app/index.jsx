@@ -1,20 +1,29 @@
-impo
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { useRouter } from 'expo-router';
+import { Dimensions, Image, StyleSheet, Text, View } from 'react-native';
 import { FokusButton } from '../components/FokusButton';
 
+const { width } = Dimensions.get("window");
+
 export default function Index() {
+  const router = useRouter();
+
   return (<View style={styles.container}>
     <Image
-      source={require('../assets/images/Fokus.png')}/>
+      source={require('../assets/images/Fokus.png')} 
+      />
     <View style={styles.inner}>
       <Text style={styles.title}>
         Organize sua mente{'\n'}  e se concentre{'\n'}
-      </Text>
         <Text style={styles.bold}>
-          concentre no que importa
+          no que importa
         </Text>
-      <Image source={require('../assets/images/iconHome.png')}/>
-      <FokusButton tittle={"Quero iniciar"}/>
+      </Text>
+      <Image source={require('../assets/images/iconHome.png')}
+      style={styles.image} resizeMode="contain"/>
+      <FokusButton 
+        title="Quero iniciar" 
+          onPress={() => router.navigate('/pomodoro')}
+      />
     </View>
     <View style={styles.footer}>
       <Text style= {styles.footerText}>
@@ -33,7 +42,8 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    gap: 40
+    backgroundColor: "#fcd7faff",
+    gap: 20
   },
   inner: {
     gap: 16
@@ -41,20 +51,20 @@ const styles = StyleSheet.create({
   title: {
     color: "#fff",
     textAlign: "center",
-    fontSize: 26,
+    fontSize: 28
   },
   bold: {
-    fontWeight: "bold"
+    fontWeight: "bold",
   },
   footer: {
     width: "80%"
   },
   footerText: {
-    color: "#fff",
+    color: "#915097ff",
     textAlign: "center",
     fontSize: 12.5
   },
-    image: {
+  image: {
     width: width, 
     height: width
   }
