@@ -17,10 +17,34 @@ export default function Layout() {
         }
       }} 
     >
-      <Drawer.Screen name="index" options={{ title: 'Início' }} />
-      <Drawer.Screen name="pomodoro" options={{ title: 'Pomodoro' }} />
-      <Drawer.Screen name="tasks/index" options={{ title: 'Tarefas' }} />
-      <Drawer.Screen name="add-task/index" options={{ headerShown:false }} />
+      <Drawer.Screen 
+        name="index" 
+        options={{ 
+          headerShown: false,
+          drawerItemStyle: {display: 'none'}
+        }} 
+      />
+      <Drawer.Screen 
+        name="add-task/index" 
+        options={{ 
+          drawerItemStyle: {display: 'none'}
+        }} 
+      />
+
+      <Drawer.Screen 
+        name="pomodoro" 
+        options={{ 
+          drawerLabel: 'Timer',
+          title: ''
+        }} 
+      />
+      <Drawer.Screen 
+        name="tasks/index" 
+        options={{ 
+          drawerLabel: 'Lista de Tarefas',
+          title: ''
+        }} 
+      />
     </Drawer>
   </GestureHandlerRootView>
   );
